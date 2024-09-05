@@ -31,12 +31,19 @@
                 </div>
                 <h4 class="text-center">Hello! let's get started</h4>
                 <h6 class="font-weight-light text-center">Sign in to continue.</h6>
-                <form class="pt-3">
+                <form class="pt-3" method="POST" action="{{ route('auth.check.user') }}">
+                  @csrf
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
+                    <input type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" placeholder="Email">
+                    @error('email')
+                      <span class="text-danger">{{ $message }}</span>   
+                    @enderror
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" placeholder="Password">
+                    @error('password')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                   </div>
                   <div class="my-2 d-flex justify-content-between align-items-center">
                     <div class="form-check">
@@ -45,7 +52,7 @@
                     </div>
                   </div>
                   <div class="mb-2">
-                    <a href="{{ route('admin.dashboard') }}" class="btn btn-block btn-facebook auth-form-btn">Login</a>
+                    <button class="btn btn-success form-control">Submit</button>
                   </div>
                 </form>
               </div>
