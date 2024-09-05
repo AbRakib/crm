@@ -6,12 +6,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('auth.login');
-});
+})->name('login');
 
 Route::post('/check-user', [AuthController::class, 'checkUser'])->name('auth.check.user');
-
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-
-Route::get('/show', function () {
-    return view('show');
+Route::prefix('/admin', function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 });
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

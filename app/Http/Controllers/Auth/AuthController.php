@@ -15,7 +15,9 @@ class AuthController extends Controller {
             'email'    => 'required|email',
             'password' => 'required|string|min:6',
         ]);
+
         $credentials = $request->only('email', 'password');
+
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             alertMessage('success', 'Login Success');
@@ -24,5 +26,14 @@ class AuthController extends Controller {
             alertMessage('error', 'Authentication Wrong');
             return redirect()->back();
         }
+    }
+
+    /**
+     * user logout
+     */
+    public function logout() {
+        Auth::logout();
+        alertMessage('info', 'Logout Successful');
+        return redirect()->route('login');
     }
 }

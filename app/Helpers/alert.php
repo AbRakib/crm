@@ -7,7 +7,7 @@ if (!function_exists('alertMessage')) {
      */
     function alertMessage($type, $message) {
         flash()
-            ->option('position', 'top-center')
+            ->option('position', 'bottom-center')
             ->option('timeout', 4000)
             ->$type($message);
     }
