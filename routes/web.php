@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,9 +10,7 @@ Route::get('/', function () {
 
 Route::post('/check-user', [AuthController::class, 'checkUser'])->name('auth.check.user');
 
-Route::get('/dashboard', function () {
-    return view('home');
-})->name('admin.dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
 Route::get('/show', function () {
     return view('show');
