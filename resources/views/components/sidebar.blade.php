@@ -22,15 +22,9 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/icons/mdi.html">
-          <span class="icon-bg"><i class="mdi mdi-contacts menu-icon"></i></span>
-          <span class="menu-title">Icons</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/forms/basic_elements.html">
+        <a class="nav-link" href="{{ route('admin.lead.index') }}">
           <span class="icon-bg"><i class="mdi mdi-format-list-bulleted menu-icon"></i></span>
-          <span class="menu-title">Forms</span>
+          <span class="menu-title">Leads</span>
         </a>
       </li>
       <li class="nav-item">
@@ -62,7 +56,7 @@
         </div>
       </li>
       <li class="nav-item documentation-link">
-        <a class="nav-link" href="http://www.bootstrapdash.com/demo/connect-plus-free/jquery/documentation/documentation.html" target="_blank">
+        <a class="nav-link" href="" target="_blank">
           <span class="icon-bg">
             <i class="mdi mdi-file-document-box menu-icon"></i>
           </span>
@@ -75,7 +69,7 @@
             <div>
               <div class="d-flex align-items-center">
                 <div class="sidebar-profile-img">
-                  <img src="assets/images/faces/face28.png" alt="image">
+                  <img class="img-fluid" src="{{ asset('assets/images/faces/face28.png') }}" alt="image">
                 </div>
                 <div class="sidebar-profile-text">
                   <p class="mb-1">Henry Klein</p>
@@ -101,7 +95,7 @@
       </li>
       <li class="nav-item sidebar-user-actions">
         <div class="sidebar-user-menu">
-          <a href="#" class="nav-link"><i class="mdi mdi-logout menu-icon"></i>
+          <a href="{{ route('logout') }}" class="nav-link"><i class="mdi mdi-logout menu-icon"></i>
             <span class="menu-title">Log Out</span></a>
         </div>
       </li>
