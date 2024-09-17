@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Lead\LeadController;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,9 @@ Route::prefix('admin')->group(function () {
 
     // lead management route
     Route::get('/lead-list', [LeadController::class, 'index'])->name('admin.lead.index');
+
+    // customer route
+    Route::get('/customers', [CustomerController::class, 'index'])->name('customer.index');
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });

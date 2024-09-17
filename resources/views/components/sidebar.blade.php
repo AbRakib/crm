@@ -2,14 +2,18 @@
     <ul class="nav">
       <li class="nav-item nav-category">Main</li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
+        <a class="nav-link" href="{{ route('admin.dashboard') }}">
+          <span class="icon-bg">
+            <i class="mdi mdi-cube menu-icon"></i>
+          </span>
           <span class="menu-title">Dashboard</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
-          <span class="icon-bg"><i class="mdi mdi-chart-bar menu-icon"></i></span>
+        <a class="nav-link" href="{{ route('customer.index') }}">
+          <span class="icon-bg">
+            <i class="mdi mdi-chart-bar menu-icon"></i>
+          </span>
           <span class="menu-title">Customers</span>
         </a>
       </li>
