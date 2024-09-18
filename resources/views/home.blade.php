@@ -1,4 +1,5 @@
-<x-layout>
+@extends('components.layout')
+@section('content')
     <div class="content-wrapper">
         <div class="d-xl-flex justify-content-between align-items-start">
             <h2 class="text-dark font-weight-bold mb-2"> Overview dashboard </h2>
@@ -32,8 +33,8 @@
                                 aria-selected="true">Users</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="business-tab" data-toggle="tab" href="#business-1"
-                                role="tab" aria-selected="false">Business</a>
+                            <a class="nav-link active" id="business-tab" data-toggle="tab" href="#business-1" role="tab"
+                                aria-selected="false">Business</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="performance-tab" data-toggle="tab" href="#" role="tab"
@@ -50,8 +51,7 @@
                     </div>
                 </div>
                 <div class="tab-content tab-transparent-content">
-                    <div class="tab-pane fade show active" id="business-1" role="tabpanel"
-                        aria-labelledby="business-tab">
+                    <div class="tab-pane fade show active" id="business-1" role="tabpanel" aria-labelledby="business-tab">
                         <div class="row">
                             <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
                                 <div class="card">
@@ -60,7 +60,8 @@
                                         <h2 class="mb-4 text-dark font-weight-bold">932.00</h2>
                                         <div
                                             class="dashboard-progress dashboard-progress-1 d-flex align-items-center justify-content-center item-parent">
-                                            <i class="mdi mdi-lightbulb icon-md absolute-center text-dark"></i></div>
+                                            <i class="mdi mdi-lightbulb icon-md absolute-center text-dark"></i>
+                                        </div>
                                         <p class="mt-4 mb-0">Completed</p>
                                         <h3 class="mb-0 font-weight-bold mt-2 text-dark">5443</h3>
                                     </div>
@@ -87,7 +88,8 @@
                                         <h2 class="mb-4 text-dark font-weight-bold">100,38</h2>
                                         <div
                                             class="dashboard-progress dashboard-progress-3 d-flex align-items-center justify-content-center item-parent">
-                                            <i class="mdi mdi-eye icon-md absolute-center text-dark"></i></div>
+                                            <i class="mdi mdi-eye icon-md absolute-center text-dark"></i>
+                                        </div>
                                         <p class="mt-4 mb-0">Increased since yesterday</p>
                                         <h3 class="mb-0 font-weight-bold mt-2 text-dark">35%</h3>
                                     </div>
@@ -100,7 +102,8 @@
                                         <h2 class="mb-4 text-dark font-weight-bold">4250k</h2>
                                         <div
                                             class="dashboard-progress dashboard-progress-4 d-flex align-items-center justify-content-center item-parent">
-                                            <i class="mdi mdi-cube icon-md absolute-center text-dark"></i></div>
+                                            <i class="mdi mdi-cube icon-md absolute-center text-dark"></i>
+                                        </div>
                                         <p class="mt-4 mb-0">Decreased since yesterday</p>
                                         <h3 class="mb-0 font-weight-bold mt-2 text-dark">25%</h3>
                                     </div>
@@ -116,10 +119,9 @@
                                                 <div class="d-flex justify-content-between align-items-center mb-4">
                                                     <h4 class="card-title mb-0">Recent Activity</h4>
                                                     <div class="dropdown dropdown-arrow-none">
-                                                        <button class="btn p-0 text-dark dropdown-toggle"
-                                                            type="button" id="dropdownMenuIconButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false">
+                                                        <button class="btn p-0 text-dark dropdown-toggle" type="button"
+                                                            id="dropdownMenuIconButton1" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false">
                                                             <i class="mdi mdi-dots-vertical"></i>
                                                         </button>
                                                         <div class="dropdown-menu dropdown-menu-right"
@@ -159,8 +161,7 @@
                                             </div>
                                             <div class="col-lg-9 col-sm-8 grid-margin  grid-margin-lg-0">
                                                 <div class="pl-0 pl-lg-4 ">
-                                                    <div
-                                                        class="d-xl-flex justify-content-between align-items-center mb-2">
+                                                    <div class="d-xl-flex justify-content-between align-items-center mb-2">
                                                         <div class="d-lg-flex align-items-center mb-lg-2 mb-xl-0">
                                                             <h3 class="text-dark font-weight-bold mr-2 mb-0">Devices
                                                                 sales</h3>
@@ -172,8 +173,8 @@
                                                                 Delight Time</p>
                                                         </div>
                                                     </div>
-                                                    <div class="graph-custom-legend clearfix"
-                                                        id="device-sales-legend"></div>
+                                                    <div class="graph-custom-legend clearfix" id="device-sales-legend">
+                                                    </div>
                                                     <canvas id="device-sales"></canvas>
                                                 </div>
                                             </div>
@@ -225,4 +226,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+@endsection

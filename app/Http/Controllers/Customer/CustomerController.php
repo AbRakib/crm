@@ -11,6 +11,6 @@ class CustomerController extends Controller {
         $this->service = new UserService();
     }
     public function index() {
-
+        return view('pages.customer.index');
     }
 }

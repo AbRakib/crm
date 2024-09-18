@@ -32,7 +32,7 @@
         @include('components.sidebar')
         <!-- partial -->
         <div class="main-panel">
-          {{ $slot }}
+          @yield('content')
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           @include('components.footer')
@@ -58,5 +58,7 @@
     <!-- Custom js for this page -->
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
     <!-- End custom js for this page -->
+
+    @yield('js')
   </body>
 </html>
