@@ -1,11 +1,16 @@
-.sidebar-profile-img img {
-    border-radius: 50%;
-    border: 1px solid #1bfd00;
+.customer-heading-top {
+    width: 100%;
 }
-.input-group {
-    flex-basis: 50%;
+.customer-button {
+    height: 40px;
 }
 .top-button {
     flex-basis: 50%;
     text-align: right;
+}
+.search-bar {
+    height: 40px;
+}
+.search-btn {
+    height: 40px;
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Lead\LeadController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,6 +20,9 @@ Route::prefix('admin')->group(function () {
 
     // customer route
     Route::get('/customers', [CustomerController::class, 'index'])->name('customer.index');
+
+    //user route
+    Route::get('/user-list', [UserController::class, 'index'])->name('user.index');
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });

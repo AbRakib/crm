@@ -2,11 +2,11 @@
 @section('content')
     <div class="content-wrapper">
         <div class="page-header">
-            <h3 class="page-title"> Customers </h3>
+            <h3 class="page-title"> Users </h3>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Customer List</li>
+                    <li class="breadcrumb-item active" aria-current="page">User List</li>
                 </ol>
             </nav>
         </div>
@@ -26,8 +26,8 @@
 
                             <!-- lead add button start -->
                             <div class="top-button">
-                                <button class="customer-button btn btn-primary" onclick="showCustomerModal()">
-                                    Add Customer
+                                <button class="customer-button btn btn-primary" onclick="showUserModal()">
+                                    Add User
                                 </button>
                             </div>
                             <!-- lead add button end -->
@@ -162,11 +162,11 @@
 
 @section('js')
     <script>
-        function showCustomerModal() {
-            $("#exampleModal").modal('show');
+        function showUserModal() {
+            $("#userModal").modal('show');
         }
-        function closeCustomerModal() {
-            $("#exampleModal").modal('hide');
+        function closeUserModal() {
+            $("#userModal").modal('hide');
         }
     </script>
 @endsection

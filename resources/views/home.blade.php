@@ -142,8 +142,9 @@
                                                     <div
                                                         class="text-wrapper d-flex align-items-center justify-content-between mb-2">
                                                         <p class="mb-0 text-dark">Total Profit</p>
-                                                        <span class="text-success"><i
-                                                                class="mdi mdi-arrow-up"></i>2.95%</span>
+                                                        <span class="text-success">
+                                                            <i class="mdi mdi-arrow-up"></i>2.95%
+                                                        </span>
                                                     </div>
                                                     <h3 class="mb-0 text-dark font-weight-bold">$ 92556</h3>
                                                     <canvas id="total-profit"></canvas>

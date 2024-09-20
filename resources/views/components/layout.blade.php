@@ -54,8 +54,10 @@
     <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
     <script src="{{ asset('assets/js/hoverable-collapse.js') }}"></script>
     <script src="{{ asset('assets/js/misc.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert2@11.js') }}"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
+    <script src="{{ asset('asset/js/ajax.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
     <!-- End custom js for this page -->
 

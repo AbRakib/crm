@@ -1,4 +1,4 @@
-function getData(url, data) {
+function getData(url, data={}) {
     $.ajax({
         type: "GET",
         url: url,
@@ -10,7 +10,7 @@ function getData(url, data) {
     });
 }
 
-function postData(url, data) {
+function storeData(url, data={}, message="Store Success") {
     $.ajax({
         type: "POST",
         url: utl,
@@ -22,10 +22,22 @@ function postData(url, data) {
     });
 }
 
-function updateData(url, data) {
+function updateData(url, data={}, message="Update Success") {
     $.ajax({
         type: "PUT",
         url: utl,
+        data: data,
+        dataType: "json",
+        success: function (response) {
+            return response;
+        }
+    });
+}
+
+function deleteData(url, data={}, message="Delete Data Success") {
+    $.ajax({
+        type: "get",
+        url: url,
         data: data,
         dataType: "json",
         success: function (response) {
